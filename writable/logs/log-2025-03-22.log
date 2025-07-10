@@ -1,0 +1,127 @@
+CRITICAL - 2025-03-22 06:39:06 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-22 06:39:27 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-22 06:40:18 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-22 06:40:20 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-22 06:40:20 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-22 06:40:33 --> ErrorException: Declaration of App\Controllers\ProductController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: products]
+in APPPATH\Controllers\ProductController.php on line 40.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-03-22 06:51:24 --> mysqli_sql_exception: Table 'inovant_test.cart' doesn't exist in C:\xampp\htdocs\inovant-test\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\inovant-test\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `cart`.`...', 0)
+#1 C:\xampp\htdocs\inovant-test\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.`...')
+#2 C:\xampp\htdocs\inovant-test\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.`...')
+#3 C:\xampp\htdocs\inovant-test\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.`...', Array, false)
+#4 C:\xampp\htdocs\inovant-test\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\inovant-test\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\inovant-test\app\Controllers\CartController.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\inovant-test\system\CodeIgniter.php(933): App\Controllers\CartController->list()
+#8 C:\xampp\htdocs\inovant-test\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#9 C:\xampp\htdocs\inovant-test\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\inovant-test\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\inovant-test\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\inovant-test\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-22 06:51:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'inovant_test.cart' doesn't exist
+[Method: GET, Route: cart/list]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = :cart.user_id:
+AND `cart`.`action` = :cart.action:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\CartController.php(26): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-22 06:51:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'inovant_test.cart' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = 1
+AND `cart`.`action` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = 1
+AND `cart`.`action` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = :cart.user_id:
+AND `cart`.`action` = :cart.action:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\CartController.php(26): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-22 06:51:24 --> [Caused by] mysqli_sql_exception: Table 'inovant_test.cart' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = 1
+AND `cart`.`action` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = 1
+AND `cart`.`action` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = 1
+AND `cart`.`action` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `cart`.`id`, `products`.`name` as `product_name`, `products`.`price`, `cart`.`quantity`
+FROM `cart`
+JOIN `products` ON `products`.`id` = `cart`.`product_id`
+WHERE `cart`.`user_id` = :cart.user_id:
+AND `cart`.`action` = :cart.action:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\CartController.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CartController->list()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-22 09:04:52 --> ErrorException: mkdir(): No such file or directory
+[Method: POST, Route: products]
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 181.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', 'C:\\xampp\\htdocs\\inovant-test\\system\\HTTP\\Files\\UploadedFile.php', 181)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(181): mkdir('C:\\xampp\\htdocs\\inovant-test\\writable\\http://localhost/inovant-test/uploads/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(135): CodeIgniter\HTTP\Files\UploadedFile->setPath('C:\\xampp\\htdocs\\inovant-test\\writable\\http://localhost/inovant-test/uploads/')
+ 4 APPPATH\Controllers\ProductController.php(38): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs\\inovant-test\\writable\\http://localhost/inovant-test/uploads/', '1742634292_db82f5e89863e8afc958.png')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
