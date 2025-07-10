@@ -1,5 +1,5 @@
-<!-- task details -->
-<!-- # 🛍️ Product Management & Cart System – CodeIgniter 4
+task details
+# 🛍️ Product Management & Cart System – CodeIgniter 4
 
 This is a basic **Product Management and Shopping Cart** web application built using **CodeIgniter 4**. The application allows users to manage products and interact with a cart system. It demonstrates CRUD operations along with a cart and image preview functionality using a modal.
 
@@ -32,7 +32,7 @@ This is a basic **Product Management and Shopping Cart** web application built u
 - **Database**: MySQL 
 - **Others**: jQuery , CodeIgniter's built-in validation
 
---- -->
+---
 
 # CodeIgniter 4 Framework
 
